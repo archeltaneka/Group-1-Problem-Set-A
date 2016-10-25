@@ -1,5 +1,6 @@
 #ifndef SODACAN_H
 #define SODACAN_H
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -58,7 +59,31 @@ class SodaCan{
 		{
 			return myContents;
 		}
-		
+		void checkBrand(char sodaBrandA[], char sodaBrandB[]) // check the soda A and B if they have the same brand
+		{
+			if(sodaBrandA == sodaBrandB)
+			{
+				cout << "You have the same soda brand! How many do you want to add? \n";
+			} else {
+				cout << "You don't have the same soda brand! Buy the same soda brand first! \n";
+			}
+		}
+		int combineContents(int contentSodaA, int contentSodaB) // adds the content of the same soda brand
+		{
+			int totalContents;
+			totalContents = contentSodaA + contentSodaB;
+			
+			return totalContents;
+		}
+		int removeContents(int contentSodaA, int contentSodaB) // removes the content of the same soda brand
+		{
+			int totalContents;
+			contentSodaA >= contentSodaB; // one of the soda has to be greater than the other soda
+			totalContents = contentSodaA - contentSodaB;
+			
+			return totalContents;
+			
+		}
 };
 
 #endif
